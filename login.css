@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    /* background-color:cadetblue; */
+    margin: 0%;
+    padding: 0%;
+    background-image: url(image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+.background-image{
+    background-image:url('./bgimage-removebg-preview.png');
+    background-size: contain;
+    height: 100vh;
+    background-position: left;
+    width:100vw; 
+    background-repeat: no-repeat;
+   
+
+}
+.login-container {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #eae7e7;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#bg{
+    display: flex;
+align-items: center;
+justify-content: right;
+}
+
+#box{
+
+    transform: translate(400px,-120px);
+}
+.top-right-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: rgb(72, 98, 99);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+#helpButton {
+    right: 100px; /* Adjust this value to set the distance between the buttons */
+}
+.info-popup {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
