@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Schedule</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button to Redirect to Map</title>
+    <style>
+      .img{
+          position: absolute;
+      top: 0%;
+      left: 0%;
+      height: 200px;
+      }
+        table {
+          margin-top: 100px;
+            width: 100%;
+            border-collapse: collapse;
+            justify-content: center;
+            display: flex;
+            position: relative;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 8px;
+            text-align: center;
+            font-size: 25px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        td {
+          background-color: rgb(243, 243, 224);
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f3f3f3;
+        }
+        .button-container {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(247, 240, 240);">
+  <img class="img" src="1718953578668.png">
+    <table>
+        <tr>
+          <th>Train Name</th>
+          <th>scheduled closing time</th>
+          <th>Closing Timing</th>
+          <th>scheduled opening time</th>
+          <th>Opening Timing</th>
+        </tr>
+        <tr>
+          <td>Rajdhan Express</td>
+          <td>10:10 PM</td>
+          <td>10:15 PM</td>
+          <td>10:17 PM</td>
+          <td>10:19 PM</td>
+        </tr>
+        <tr>
+          <td>Shatabdi Express</td>
+          <td>11:20 PM</td>
+          <td>11:25 PM</td>
+          <td>11:27 PM</td>
+          <td>11:29 PM</td>
+        </tr>
+        <tr>
+          <td>Gatimaan Express</td>
+          <td>01:00 AM</td>
+          <td>01:05 AM</td>
+          <td>01:06 PM</td>
+          <td>01:09 AM</td>
+        </tr>
+        <tr>
+          <td>Tejas Express</td>
+          <td>02:00 AM</td>
+          <td>02:05 AM</td>
+          <td>02:06 PM</td>
+          <td>02:09 AM</td>
+        </tr>
+        <tr>
+          <td>Howra Express</td>
+          <td>05:30 PM</td>
+          <td>05:35 PM</td>
+          <td>05:36 PM</td>
+          <td>05:39 AM</td>
+        </tr>
+    </table>
+    <div class="button-container">
+        <button onclick="redirectToMap()">Show Route</button>
+    </div>
+
+    <script>
+        function redirectToMap() {
+            document.write(`
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Route from Hyderabad to Nizamabad</title>
+                    <style>
+                        body, html {
+                            height: 100%;
+                            margin: 0;
+                            font-family: Arial, sans-serif;
+                        }
+                        .map-container {
+                            height: 100%;
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: #f3f3f3;
+                        }
+                        iframe {
+                            border: none;
+                            width: 80%;
+                            height: 80%;
+                            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                            border-radius: 8px;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div class="map-container">
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1952598.68771403!2d80.54663452771285!3d17.08882068213343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3a39431389e6973f%3A0x92d9c20395498468!2sVisakhapatnam%2C%20Andhra%20Pradesh!3m2!1d17.6868159!2d83.2184815!4m5!1s0x3a35ed0b183aea1b%3A0x11d318810e9c92c2!2sAmaravati%2C%20Andhra%20Pradesh!3m2!1d16.5130887!2d80.5164523!5e0!3m2!1sen!2sin!4v1718964457482!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </body>
+                </html>
+            `);
+        }
+    </script>
+</html>
