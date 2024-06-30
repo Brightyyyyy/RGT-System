@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+<link rel="stylesheet" href="./login.css">
+</head>
+<body >
+<div class="background-image  form" id="bg">
+<div class="login-container" id="box">
+    <h2>LOGIN</h2>
+    <form action="your-login-script.php" method="post" >
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+       
+        <a onclick="submit()" id="sub">LOGIN</a>
+    </form>
+</div>
+</div>
+<script src="./login.js"></script>
+<button class="top-right-button" id="aboutButton" onclick="showInfo('about')">About</button>
+    <button class="top-right-button" id="helpButton" onclick="showInfo('help')">Help</button>
+    <div class="info-popup" id="aboutInfo">
+        <h3>About RGT</h3>
+        <p>RGT System is a go to platfrom to know about the status of railway gates of India. Along side with status of gates it also provides an alternate route to our destination.</p>
+    </div>
+    <div class="info-popup" id="helpInfo">
+        <h3>Help</h3>
+        <p>If you need help logging in, please contact our support team at support abcd@gmail.com or call 123456789.</p>
+    </div>
+    <script src="./login.js"></script>
+    <script>
+        function showInfo(type) {
+            var aboutInfo = document.getElementById('aboutInfo');
+            var helpInfo = document.getElementById('helpInfo');
+            
+            if (type === 'about') {
+                aboutInfo.style.display = aboutInfo.style.display === 'block' ? 'none' : 'block';
+                helpInfo.style.display = 'none';
+            } else if (type === 'help') {
+                helpInfo.style.display = helpInfo.style.display === 'block' ? 'none' : 'block';
+                aboutInfo.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
